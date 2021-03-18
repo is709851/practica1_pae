@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica uno</title>
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"> </script>
+</head>
+<body style="background-color: black;">
+       <h2 id="title">{{title}}</h2>
+       <div class="col-12">
+              <input type="search" class="search" placeholder="Buscar" id="buscador">
+       </div>
+       <div class="col-12">
+              <button class="btn go" id="busqueda" onclick="busqueda()"><i class="fa fa-search" aria-hidden="true"> Go </i></button> 
+       </div>
+       <p id="detalle-web"> This proyect depends on <a href="https://newsapi.org/">NewsAPI</a>, a simple HTTP REST API for searching and retrieving live articles from all over the word. </p>
+<!--Cada noticia se coloca en un item, cada una tiene imagen, titulo, descripcion y url-->
+       <div class="grid-container" id="articles" hidden>
+       {{#each news}}
+       <div class="news-container">
+              <div class="container" id="img">
+                     <img src="{{urlToImage}}" id="urlToImage" />
+              </div>
+              <div id="description">
+                     <h2 id="titleImage">{{title}}</h2>
+                     <p id="description-image">{{description}}</p>
+                     <a href="{{url}}" target="_blank" id="ver-mas">Read More</a>
+              </div>
+              </div>
+       {{/each}}
+       </div>
+ <script src="/assets/scripts/main.js"></script>
+
+</body>
+</html>

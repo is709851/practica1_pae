@@ -1,0 +1,29 @@
+{
+  "name": "practica_uno",
+  "version": "1.0.0",
+  "description": "Practica uno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "gulp styles",
+    "scripts": "tsc",
+    "start": "npm run build && http-server ./dist",
+    "build": "gulp"
+  },
+  "keywords": [
+    "compilers"
+  ],
+  "author": "Elieth Macias",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "http-server": "^0.12.3",
+    "newsapi": "^2.4.1",
+    "sass": "^1.32.7",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1"
+  }
+}

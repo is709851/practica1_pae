@@ -1,0 +1,59 @@
+#title{
+    color: white;
+    font-weight: 600px;
+    text-align: center;
+}
+#buscador{
+    display: flex;
+    width: 100%;
+    padding: auto;
+    margin-bottom: 10px;
+}
+#busqueda{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    background-color: darkcyan;
+    align-content: center;
+}
+#detalle-web{
+    margin: 10px;
+    color: white;
+}
+.grid-container{
+    max-width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+.news-container{
+    max-width: 300px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    height: auto;
+    background-color: linen;
+    padding-top: 10px;
+}
+#img{
+    width: 100%;
+    max-height: fit-content;
+}
+#urlToImage{
+    height: 30%;
+    width: 100%;
+    object-fit: cover;
+}
+#description, #titleImage, #description-image{
+    height: auto;
+    padding: 10px;
+}
+#ver-mas{
+    color: white;
+    font-weight: 500px;
+    background-color: darkcyan;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 10px;
+}
