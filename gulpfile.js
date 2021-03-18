@@ -26,7 +26,10 @@ gulp.task('scripts', function(){
     .pipe(tsConfig()) //Transformacion especificada en config
     .pipe(gulp.dest('dist/assets/scripts')); //Destino
 });
-
+gulp.task('watch:scripts', gulp.series('scripts', function(done){
+    gulp.watch('src/**/*.ts', gulp.series('scripts'));
+    done();
+}))
 //Primero se registran las tareas y después el default
 gulp.task('default', gulp.parallel(('styles', 'html', 'scripts')));
 
